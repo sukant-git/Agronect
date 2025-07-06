@@ -1,0 +1,28 @@
+.product-display {
+    margin-top: 30px;
+}
+
+.product-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.product-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.product-item-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

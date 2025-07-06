@@ -1,0 +1,89 @@
+.product-item {
+    width: fit-content; /* ✅ Fixed */
+    max-width: 570px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item-img-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.product-item-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item-info {
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.product-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-item-price {
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.farmer-location, .product-item-farmerName {
+    color: gray;
+    font-size: 14px;
+}
+
+
+.product-item-img-container{
+    position: relative;
+
+}
+
+.product-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 35px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+.product-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.product-item-counter img{
+    width: 30px;
+    
+}
+
+.product-item-farmerName span{
+    font-weight: 600;
+}
+
+.farmer-location span{
+
+    font-weight: 600;
+}
+.product-item-counter{
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,56 @@
+.scroll-container {
+    width: 100%;
+    max-height: 500px; /* Adjust height for vertical scroll */
+    overflow: auto; /* Enables both X and Y scrolling */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Optional: style scrollbars */
+  .scroll-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-container{
+    margin-top: -30px;
+  }
+
+  
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+  }
+  
+  .list-table-format {
+
+    display: grid;
+    grid-template-columns: 100px 150px 120px 80px 150px 150px 60px;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    min-width: 800px; /* Ensures horizontal scroll if content overflows */
+  }
+  
+  .list-table-format.title {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .list-table img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .delete-btn {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
