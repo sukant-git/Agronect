@@ -54,25 +54,20 @@ const RegisterUser = async (req, res) => {
 
 
 
-
-// ✅ Login User
 const LoginUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Check if user exists
     const user = await userModel.findOne({ email });
     if (!user) {
       return res.status(401).json({ success: false, message: "User not found" });
     }
 
-    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ success: false, message: "Invalid credentials" });
     }
 
-    // Generate JWT Token
   
 
     res.status(200).json({ success: true, message: "Login successful", token });
