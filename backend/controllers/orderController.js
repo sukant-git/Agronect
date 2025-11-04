@@ -27,12 +27,11 @@ const placeOrder = async (req, res) => {
         method: "COD",
         status: false,
       },
-      status: status || "Product Processing", // Default to "Product Processing"
+      status: status || "Product Processing", 
     });
 
     await newOrder.save();
 
-    // Clear user cart
     await userModel.findByIdAndUpdate(userId, { cart: {} });
 
     res.status(201).json({
@@ -49,7 +48,6 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// GET USER ORDERS
 const userOrder = async (req, res) => {
   try {
     const orders = await orderModel.find({ userId: req.body.userId });
@@ -60,7 +58,6 @@ const userOrder = async (req, res) => {
   }
 };
 
-// GET ALL ORDERS (Admin)
 const listOrders = async (req, res) => {
   try {
     const orders = await orderModel.find({});
@@ -71,7 +68,6 @@ const listOrders = async (req, res) => {
   }
 };
 
-// UPDATE STATUS
 const updateStatus = async (req, res) => {
   try {
     const { orderId, status } = req.body;
