@@ -15,7 +15,6 @@ const addProduct = async (req, res) => {
             return res.status(400).json({ success: false, message: "All fields are required" });
         }
 
-        // Ensure price is a valid number
         const parsedPrice = Number(price);
         if (isNaN(parsedPrice) || parsedPrice <= 0) {
             return res.status(400).json({ success: false, message: "Invalid price" });
